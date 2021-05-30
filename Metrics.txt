@@ -1,0 +1,53 @@
+*Logistic regression :
+tr = 0.714859437751004
+va = 0.7060240963855422
+
+*Decision Tree:
+tr = 1.0
+va = 0.9542168674698795
+
+*Decision Tree  max_depth=10:
+tr = 0.9951807228915662
+va = 0.9325301204819277
+
+* Random Forest:
+tr = 1
+va = 0.9927710843373494
+
+* Random Forest  estimators=20:
+tr = 1
+va = 0.9951807228915662
+
+click +train
+[box[i],
+TR_acc,
+VA_acc,
+ovrfit]
+[RandomForestClassifier(random_state=42),
+  0.993601462522852,
+  0.9689213893967094,
+  0.02468007312614262],
+ [DecisionTreeClassifier(random_state=42),
+  0.993601462522852,
+  0.9506398537477148,
+  0.04296160877513722],
+ [LogisticRegression(random_state=42),
+  0.8893967093235832,
+  0.8921389396709324,
+  -0.002742230347349217]
+  
+  
+  
+  xgboost best 0.91
+  {'colsample_bytree': 0.1,
+ 'gamma': 5,
+ 'max_depth': 2,
+ 'min_child_weight': 1,
+ 'subsample': 0.2}
+ 
+ xgboost0.9N
+ {'colsample_bytree': 0.1,
+ 'gamma': 1,
+ 'max_depth': 2,
+ 'min_child_weight': 10,
+ 'subsample': 0.5}
